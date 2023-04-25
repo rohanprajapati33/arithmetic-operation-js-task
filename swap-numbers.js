@@ -15,13 +15,24 @@ b = x;*/
 //console.log(a + " " + b);
 
 function swapTwonumber(a, b) {
-  a = a + b;
-  b = a - b;
-  a = a - b;
-  return { a, b };
+  if (a && b) {
+    if (isGivenType(a) && isGivenType(b)) {
+      a = a + b;
+      b = a - b;
+      a = a - b;
+      return { a, b };
+    } else {
+      let x;
+      x = a;
+      a = b;
+      b = x;
+      return { a, b };
+    }
+  }
 }
 
-console.log(swapTwonumber(5, 6));
+function isGivenType(value, type) {
+  return typeof value === type;
+}
 
-let string = "rohanprajapati";
-console.log(string.reverse);
+console.log(swapTwonumber(undefined,null));
