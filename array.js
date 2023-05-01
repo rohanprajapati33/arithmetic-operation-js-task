@@ -12,9 +12,6 @@ let b = array.map((value, index) => {
 // const x = array.map((value) => value*2);
 console.log(b);
 
-
-
-
 // find even number
 let x = [5, 8, 56, 28, 17, 20, 32, 38, 11, 13, 23];
 let even = x.filter((a) => {
@@ -23,36 +20,28 @@ let even = x.filter((a) => {
 // const even = x.filter((a) => a % 2 === 0);
 console.log(even);
 
-
-
 //Array Join method
 let myColor = ["Red", "Green", "White", "Black"];
 console.log(myColor.join(",").split(","));
 
+//Get a first a element from array
+function getFirstNElmentsFromGivenArray(arr, size = 0) {
+  if (size >= 0) {
+    if (!arr.length) {
+      return [];
+    } else {
+      return arr.slice(0, size);
+    }
+  } else {
+    console.log("Negative size not allowed");
+  }
+}
+console.log(getNFirstElmentsFromGivenArray([1, 2, 4, 5], 2));
 
-
-let arr = [1, 2, 22, 36, 45, 98, 78];
-console.log(arr.slice(0, 3));
-
-// function getFirstNElmentsFromGivenArray(arr, size = 0) {
-//   if (size >= 0) {
-//     if (!arr.length) {
-//       return [];
-//     } else {
-//       return arr.slice(0, size);
-//     }
-//   } else {
-//     console.log("Negative size not allowed");
-//   }
-// }
-
-//console.log(getNFirstElmentsFromGivenArray([1,2,4,5], 2));
-
+//Get a last element from array
 function getLastNElmentsFromGivenArray(array, n) {
-  if (array == null) 
-  return 0;
-  if (n == null) 
-  return array[array.length - 1];
+  if (array == null) return 0;
+  if (n == null) return array[array.length - 1];
   return array.slice(Math.max(array.length - n, 0));
 }
 console.log(getLastNElmentsFromGivenArray([3, 5, 6, 8], 2));

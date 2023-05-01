@@ -5,10 +5,10 @@
 //   console.log("Area = " + areaOfSquare(4));
 
 //area of rectangle
-  //  function areaOfRectangle(height, width) {
-  //     return height * width;
-  //   }
-  //  console.log("Area = " + areaOfRectangle(5, 6));
+//  function areaOfRectangle(height, width) {
+//     return height * width;
+//   }
+//  console.log("Area = " + areaOfRectangle(5, 6));
 
 //area of triangle
 //   function areaOfTriangle(length, height) {
@@ -16,22 +16,21 @@
 //     }
 //   console.log("Area =" + areaOfTriangle(15, 20));
 
-
 //With Normal Function
-// function calculateArea(shape, width, height) {
-//   switch (shape) {
-//     case "square":
-//     case "rectangle":
-//       return height * width;
+function calculateArea(shape, width, height) {
+  switch (shape) {
+    case "square":
+    case "rectangle":
+      return height * width;
 
-//     case "trinangle":
-//       return (height * width) / 2;
-//     default:
-//   }
-// }
-// console.log(calculateArea("square", 10,10));
-// console.log(calculateArea("rectangle", 10, 15));
-// console.log(calculateArea("trinangle", 10,20));
+    case "trinangle":
+      return (height * width) / 2;
+    default:
+  }
+}
+console.log(calculateArea("square", 10, 10));
+console.log(calculateArea("rectangle", 10, 15));
+console.log(calculateArea("trinangle", 10, 20));
 
 //with enum
 const Shapes = {
