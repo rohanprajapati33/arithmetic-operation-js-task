@@ -55,12 +55,12 @@ function findSum(a, b) {
 //  console.log(recursiveSum([1,25,3,4]));
 
 
-//  function sumNumbersRecursively(input){
-//     if (input.length == 0){
-//         return 0;
-//     } else{
-//        return input.shift() + sumNumbersRecursively(input);
-//     }
-// }
+  function sumNumbersRecursively(input){
+     if (input.length == 0){
+         return 0;
+     } else{
+        return input.shift() + sumNumbersRecursively(input);
+     }
+ }
 
-// console.log(sumNumbersRecursively([2,3,4]))
+ console.log(sumNumbersRecursively([2,3,4]))
