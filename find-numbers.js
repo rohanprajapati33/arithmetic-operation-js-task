@@ -14,7 +14,9 @@
 
 function findNumbers(arr,key, val) {
   return arr.some((arrVal) => val === arrVal[key]);
+  return !!arr.find((arrVal) => val === arrVal[key]);
+  return arr.find((arrVal) => val === arrVal[key]) ?true : false;
 }
 
-console.log(findNumbers(employees,'name',"ajay")); // false
+console.log(findNumbers(employees,'name',"ajay")); 
  
